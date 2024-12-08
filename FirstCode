@@ -1,0 +1,23 @@
+/*This is my first code. I did not want it to be too complicated so i did only 2 currencies. For start i think this is great since i recently learned java */
+import java.util.Scanner;
+
+public class App {
+    public static void main(String[] args) throws Exception {
+        Scanner ulaz = new Scanner(System.in);
+        System.out.println("Please select what type of currency do you want to convert(Dinar/RSD,Euro):");
+        String Curr = ulaz.nextLine();
+        double Dinars = 116.45;
+        if (Curr.equals("Dinar")) {
+            System.out.println("Please select the value of Dinars that you would like to convert to Euros:");
+            int value = ulaz.nextInt();
+            Double result = value / Dinars;
+            System.out.println("Dinars:" + value + "-->  Euros:" + result);
+        } else if (Curr.equals("Euro")) {
+            System.out.println("Please select the value of Euros that you would like to convert to Dinars:");
+            int value = ulaz.nextInt();
+            Double result = value * Dinars;
+            System.out.println("Euros:" + value + "-->  Dinars:" + result);
+        }
+        ulaz.close();
+    }
+}
